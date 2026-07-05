@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cysterskie Kompozycje</title>
+    <link rel="preload" as="image" href="las_tlo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vendor/p5.min.js?v=1" defer></script>
+    <script src="background-core.js?v=6" defer></script>
+    <script src="script.js?v=6" defer></script>
+  </head>
+  <body data-variant="natural">
+    <div class="background-stage" id="background-stage" aria-hidden="true"></div>
+    <div class="fog-layer" aria-hidden="true"></div>
+    <div class="grain-layer" aria-hidden="true"></div>
+
+    <div class="page-shell">
+      <aside class="side-menu" aria-label="Pionowe menu">
+        <div class="menu-spine" aria-hidden="true"></div>
+        <ul class="menu-list">
+          <li class="menu-item" style="--offset:-16px; --tilt:-2.1deg; --gap:0rem;">
+            <button class="menu-link is-active" type="button" data-label="Główna" aria-current="page">
+              <span>Główna</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--offset:8px; --tilt:1.4deg; --gap:1.55rem;">
+            <button class="menu-link" type="button" data-label="Nagrania">
+              <span>Nagrania</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--offset:-10px; --tilt:-1.2deg; --gap:0.95rem;">
+            <button class="menu-link" type="button" data-label="Zdjęcia">
+              <span>Zdjęcia</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--offset:18px; --tilt:2.2deg; --gap:1.9rem;">
+            <button class="menu-link" type="button" data-label="Więcej">
+              <span>Więcej</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--offset:-4px; --tilt:-0.6deg; --gap:0.75rem;">
+            <button class="menu-link" type="button" data-label="Proces">
+              <span>Proces</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--offset:14px; --tilt:1.8deg; --gap:1.3rem;">
+            <button class="menu-link" type="button" data-label="Subskrypcja">
+              <span>Subskrypcja</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--offset:-18px; --tilt:-2.4deg; --gap:1.8rem;">
+            <button class="menu-link" type="button" data-label="Ekologia">
+              <span>Ekologia</span>
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="hero" id="glowna">
+        <div class="text-stack" id="text-stack">
+          <div class="text-shadow-layer text-shadow-layer--one" aria-hidden="true"></div>
+          <div class="text-shadow-layer text-shadow-layer--two" aria-hidden="true"></div>
+
+          <article class="text-frame">
+            <p>
+              Cysterskie Kompozycje to koncert, którego nie ogląda się z
+              oddali, lecz przeżywa od środka. W leśnej przestrzeni dźwięk nie płynie ze
+              sceny — rodzi się wokół, między drzewami, w ściółce, w poruszeniach
+              powietrza i w drobnych, ledwie uchwytnych drganiach otoczenia. To właśnie
+              one stają się materią wydarzenia: nagrywane na żywo, przetwarzane i
+              ponownie wprowadzane w przestrzeń, tworzą immersyjny pejzaż akustyczny, w
+              którym natura nie jest tłem, lecz współtwórczynią całej kompozycji.
+            </p>
+            <p>
+              Uczestnictwo w tym doświadczeniu wymaga innego rodzaju obecności. Nie
+              chodzi o szybki odbiór bodźców ani o koncentrację na widowisku.
+              Przeciwnie — projekt zaprasza do wyciszenia, skupienia i słuchania, które
+              staje się formą uważnego kontaktu z miejscem. Siedząc w kręgu, często z
+              zamkniętymi oczami, uczestnicy zanurzają się w dźwiękach lasu: w szumie
+              liści, rytmie owadów, głosach ptaków, rezonansie gałęzi i odległych
+              sygnałach przestrzeni. To słuchanie nie ma charakteru biernego. Jest
+              praktyką obecności, która uruchamia wyobraźnię, ciało i pamięć.
+            </p>
+          </article>
+        </div>
+      </main>
+
+      <aside class="variant-panel" aria-label="Propozycje nastroju">
+        <p class="variant-kicker">Warianty</p>
+        <div class="variant-list">
+          <button class="variant-chip is-current" type="button" data-variant="natural">
+            <strong>Subtelna</strong>
+            <span>leśna, przygaszona, minimalny glitch</span>
+          </button>
+          <button class="variant-chip" type="button" data-variant="mist">
+            <strong>Organiczna</strong>
+            <span>mgła, lżejsza zieleń, więcej oddechu</span>
+          </button>
+          <button class="variant-chip" type="button" data-variant="glitch">
+            <strong>Eksperymentalna</strong>
+            <span>ciemniej, ziarniej, mocniejszy rozjazd warstw</span>
+          </button>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
