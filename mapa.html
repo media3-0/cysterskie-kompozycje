@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa dźwiękowa · Cysterskie Kompozycje</title>
+    <meta name="description" content="Interaktywna mapa dźwiękowa obszaru Przegędzy i polany Kanetowiec — pięć miejsc z nagraniami leśnej przyrody." />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mapa.css?v=1" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="masthead">
+        <a class="back" href="index.html" aria-label="Powrót do strony głównej">
+          <span aria-hidden="true">←</span> Powrót
+        </a>
+        <div class="titles">
+          <p class="kicker">Cysterskie Kompozycje</p>
+          <h1>Mapa dźwiękowa lasu</h1>
+        </div>
+      </header>
+
+      <p class="lead">
+        Obszar Przegędzy i polany Kanetowiec potraktowaliśmy jak partyturę.
+        Pięć zaznaczonych miejsc to punkty nasłuchu — przystanki, w których las
+        odzywa się własnym głosem. Kliknij znacznik na mapie lub wybierz punkt
+        z listy, aby zanurzyć się w około czterominutowym nagraniu terenowym.
+        Najlepiej słuchać w słuchawkach, z zamkniętymi oczami.
+      </p>
+
+      <div class="layout">
+        <div id="map" role="application" aria-label="Interaktywna mapa punktów nasłuchu"></div>
+
+        <aside class="stops" aria-label="Lista punktów nasłuchu">
+          <!-- wypełniane skryptem -->
+        </aside>
+      </div>
+
+      <footer class="credits">
+        <p>
+          Podkład mapy © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> i współtwórcy.
+          Nagrania pochodzą z Wikimedia Commons na licencji CC BY-SA 4.0 — pełne
+          atrybucje w opisie każdego punktu.
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="mapa.js?v=1" defer></script>
+  </body>
+</html>
