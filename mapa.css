@@ -271,15 +271,16 @@ h1 {
   padding: 0.8rem clamp(1rem, 3vw, 2rem);
   flex-wrap: wrap;
 }
-.funding-logos { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
-.logo-kpo { display: flex; align-items: center; gap: 0.45rem; }
+.funding-logos { display: flex; align-items: center; gap: 1.4rem; flex-shrink: 0; }
+.logo-kpo { display: flex; align-items: center; gap: 0.6rem; }
+.kpo-mark { height: 48px; width: auto; display: block; }
 .logo-kpo .kpo-text {
-  font: 700 0.6rem/1.05 "Cormorant Garamond", Georgia, serif;
+  font: 700 0.82rem/1.05 "Cormorant Garamond", Georgia, serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #1d1d54;
 }
-.flag { height: 22px; width: auto; display: block; border: 1px solid rgba(0, 0, 0, 0.18); border-radius: 2px; }
+.flag { height: 42px; width: auto; display: block; border: 1px solid rgba(0, 0, 0, 0.18); border-radius: 2px; }
 .funding-text {
   margin: 0;
   font-family: "Cormorant Garamond", Georgia, serif;
