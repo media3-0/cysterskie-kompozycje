@@ -61,12 +61,12 @@
         "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_-_European_Robin_XC249306.mp3",
     },
     {
-      title: "Skraj lasu · Przegędza",
-      subtitle: "granica wsi i boru",
+      title: "Śródleśny ostęp",
+      subtitle: "wnętrze boru",
       desc:
-        "Tam, gdzie las spotyka się z zabudową, powietrze wypełnia bogaty, płynny śpiew kapturki — jeden z najbardziej muzykalnych głosów europejskiego lasu.",
-      lat: 50.1215,
-      lon: 18.6313,
+        "Głęboko w lesie, z dala od dróg i zabudowy. Powietrze wypełnia bogaty, płynny śpiew kapturki — jeden z najbardziej muzykalnych głosów europejskiego boru, prowadzony w gęstwinie koron.",
+      lat: 50.1131,
+      lon: 18.6192,
       audio:
         "https://upload.wikimedia.org/wikipedia/commons/2/2f/Sylvia_atricapilla_-_Eurasian_Blackcap_XC559969.mp3",
       species: "Kapturka (Sylvia atricapilla)",
