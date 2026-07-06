@@ -809,3 +809,54 @@ body[data-active-section]:not([data-active-section="glowna"]) .text-shadow-layer
 @media (max-width: 980px) {
   .text-frame { max-height: none; overflow: visible; }
 }
+
+
+/* ===== Stopka z klauzulą dofinansowania (widoczna na każdej sekcji) ===== */
+.funding {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  background: rgba(5, 11, 7, 0.88);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(150, 196, 136, 0.25);
+}
+.funding-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem 1.4rem;
+  padding: 0.5rem clamp(0.8rem, 2vw, 1.6rem);
+  flex-wrap: wrap;
+}
+.funding-logos { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
+.logo-kpo { display: flex; align-items: center; gap: 0.45rem; }
+.logo-kpo .kpo-text {
+  font: 700 0.6rem/1.05 "IBM Plex Mono", "Courier New", monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #e8efe2;
+}
+.flag { height: 22px; width: auto; display: block; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 2px; }
+.funding-text {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  color: rgba(233, 241, 227, 0.82);
+  letter-spacing: 0.01em;
+  text-align: center;
+  max-width: 64ch;
+}
+
+/* zostaw miejsce pod stałą stopką, by nie zasłaniała treści */
+.page-shell { padding-bottom: 4.6rem; }
+
+@media (max-width: 980px) {
+  .funding { position: static; }
+  .page-shell { padding-bottom: 1rem; }
+  .funding-inner { justify-content: flex-start; }
+}
