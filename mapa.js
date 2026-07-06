@@ -47,12 +47,12 @@
         "https://commons.wikimedia.org/wiki/File:Turdus_merula_-_Common_Blackbird_XC561032.mp3",
     },
     {
-      title: "Kapliczka słupowa",
-      subtitle: "przy leśnym szlaku",
+      title: "Żużlówka w lesie",
+      subtitle: "nasyp dawnej kolei piaskowej",
       desc:
-        "Cichy punkt przy dawnym trakcie. W gęstwinie odzywa się kapela drozda śpiewaka — powtarzane, dobitne motywy układające się w rytmiczną frazę.",
-      lat: 50.1344,
-      lon: 18.6438,
+        "Śródleśny odcinek porzuconej „żużlówki” — dawnej kolei piaskowej, dziś zarośniętego nasypu wśród drzew. W gęstwinie odzywa się rudzik: powtarzane, dobitne, srebrzyste frazy układające się w rytmiczną pieśń.",
+      lat: 50.1062,
+      lon: 18.5991,
       audio:
         "https://upload.wikimedia.org/wikipedia/commons/9/96/Erithacus_rubecula_-_European_Robin_XC249306.mp3",
       species: "Rudzik (Erithacus rubecula)",
