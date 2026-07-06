@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zdjęcia · Cysterskie Kompozycje</title>
+    <meta name="description" content="Dokumentacja fotograficzna koncertu Cysterskie Kompozycje na Polanie Kanetowiec, 18 października 2025." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="strona.css?v=1" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">Cysterskie Kompozycje<span>Przegędza · Polana Kanetowiec</span></a>
+        <nav aria-label="Nawigacja główna">
+          <ul class="nav">
+            <li><a href="index.html">Główna</a></li>
+            <li><a href="o-projekcie.html">O projekcie</a></li>
+            <li><a href="proces.html">Proces</a></li>
+            <li><a href="artysci.html">Artyści</a></li>
+            <li><a href="materialy.html">Materiały</a></li>
+            <li><a href="galeria.html" class="is-active" aria-current="page">Zdjęcia</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="ekologia.html">Ekologia</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="page-head">
+        <p class="kicker">Dokumentacja</p>
+        <h1>Zdjęcia z polany</h1>
+        <p class="subtitle">Sobota, 18 października 2025 — Polana Kanetowiec pod Przegędzą. Krąg słuchaczy, stanowiska artystów i jesienny las jako współtwórca koncertu. Kliknij zdjęcie, aby powiększyć.</p>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <a href="zdjecia/foto-01.jpg"><img src="zdjecia/foto-01.jpg" alt="Dwoje artystów przy stole z mikserami i sprzętem elektronicznym, obok głośnik, w tle publiczność na polanie." loading="lazy" /></a>
+        <a href="zdjecia/foto-05.jpg"><img src="zdjecia/foto-05.jpg" alt="Artyści pracujący przy stole z mikserami i plątaniną kabli, głośnik na statywie, jesienny las." loading="lazy" /></a>
+        <a href="zdjecia/foto-09.jpg"><img src="zdjecia/foto-09.jpg" alt="Artyści przy stole ze sprzętem i laptopem, w tle rowery i las." loading="lazy" /></a>
+        <a href="zdjecia/foto-08.jpg"><img src="zdjecia/foto-08.jpg" alt="Zbliżenie stanowiska artystów z laptopem, obok rodzina z dzieckiem." loading="lazy" /></a>
+        <a href="zdjecia/foto-06.jpg"><img src="zdjecia/foto-06.jpg" alt="Szeroki plan polany: leżaki i kolumny głośnikowe w kręgu wśród drzew, liście na ściółce." loading="lazy" /></a>
+        <a href="zdjecia/foto-07.jpg"><img src="zdjecia/foto-07.jpg" alt="Słuchacze na leżakach ustawionych w krąg pośród jesiennego lasu." loading="lazy" /></a>
+        <a href="zdjecia/foto-03.jpg"><img src="zdjecia/foto-03.jpg" alt="Publiczność odpoczywająca na leżakach, w tle stanowisko artystów i sosnowy las." loading="lazy" /></a>
+        <a href="zdjecia/foto-04.jpg"><img src="zdjecia/foto-04.jpg" alt="Uczestnicy na leżakach przed drewnianą wiatą, na pierwszym planie osoba przy sprzęcie." loading="lazy" /></a>
+        <a href="zdjecia/foto-02.jpg"><img src="zdjecia/foto-02.jpg" alt="Małe dziecko na jesiennej polanie wśród rozstawionych leżaków, w tle las i słuchacze." loading="lazy" /></a>
+        <a href="zdjecia/foto-11.jpg"><img src="zdjecia/foto-11.jpg" alt="Prowadzący stojący obok publiczności wypoczywającej na leżakach." loading="lazy" /></a>
+        <a href="zdjecia/foto-12.jpg"><img src="zdjecia/foto-12.jpg" alt="Uczestnicy zrelaksowani na leżakach podczas słuchania, jesienny las w tle." loading="lazy" /></a>
+        <a href="zdjecia/foto-10.jpg"><img src="zdjecia/foto-10.jpg" alt="Korony drzew w jesiennych barwach na tle błękitnego nieba." loading="lazy" /></a>
+        <a href="zdjecia/foto-13.jpg"><img src="zdjecia/foto-13.jpg" alt="Kolumna głośnikowa na statywie i skrzynie transportowe na polanie przed koncertem." loading="lazy" /></a>
+      </div>
+
+      <div class="crumbs">
+        <a href="o-projekcie.html">O projekcie →</a>
+        <a href="mapa.html">Mapa dźwiękowa →</a>
+        <a href="materialy.html">Materiały →</a>
+      </div>
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+      <span class="lb-close" aria-hidden="true">×</span>
+      <img id="lb-img" src="" alt="" />
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>„Cysterskie Kompozycje" — artystyczno-ekologiczne wydarzenie dźwiękowe. Polana Kanetowiec, Przegędza, 18 października 2025.</p>
+        <p>Realizacja: Fundacja Media 3.0 ze środków Krajowego Planu Odbudowy (KPO dla Kultury), we współpracy z Narodowym Instytutem Muzyki i Tańca. Partner techniczny: Fundacja Soundscape.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var lb = document.getElementById("lightbox");
+        var lbImg = document.getElementById("lb-img");
+        document.getElementById("gallery").addEventListener("click", function (e) {
+          var a = e.target.closest("a");
+          if (!a) return;
+          e.preventDefault();
+          lbImg.src = a.getAttribute("href");
+          lbImg.alt = a.querySelector("img") ? a.querySelector("img").alt : "";
+          lb.classList.add("open");
+        });
+        function close() { lb.classList.remove("open"); lbImg.src = ""; }
+        lb.addEventListener("click", close);
+        document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+      })();
+    </script>
+  </body>
+</html>
