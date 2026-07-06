@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cysterskie Kompozycje</title>
     <link rel="preload" as="image" href="las_tlo.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=7" />
     <script src="vendor/p5.min.js?v=1" defer></script>
     <script src="background-core.js?v=6" defer></script>
-    <script src="script.js?v=6" defer></script>
+    <script src="script.js?v=7" defer></script>
   </head>
-  <body data-variant="natural">
+  <body data-variant="natural" data-active-section="glowna">
     <div class="background-stage" id="background-stage" aria-hidden="true"></div>
     <div class="fog-layer" aria-hidden="true"></div>
     <div class="grain-layer" aria-hidden="true"></div>
@@ -20,44 +20,28 @@
         <div class="menu-spine" aria-hidden="true"></div>
         <ul class="menu-list">
           <li class="menu-item" style="--offset:-16px; --tilt:-2.1deg; --gap:0rem;">
-            <button class="menu-link is-active" type="button" data-label="Główna" aria-current="page">
-              <span>Główna</span>
-            </button>
+            <button class="menu-link is-active" type="button" data-section="glowna" data-label="Główna" aria-current="page"><span>Główna</span></button>
           </li>
           <li class="menu-item" style="--offset:8px; --tilt:1.4deg; --gap:1.55rem;">
-            <a class="menu-link" href="o-projekcie.html" data-label="O projekcie" style="text-decoration:none;">
-              <span>O projekcie</span>
-            </a>
+            <button class="menu-link" type="button" data-section="o-projekcie" data-label="O projekcie"><span>O projekcie</span></button>
           </li>
           <li class="menu-item" style="--offset:-10px; --tilt:-1.2deg; --gap:0.95rem;">
-            <a class="menu-link" href="proces.html" data-label="Proces" style="text-decoration:none;">
-              <span>Proces</span>
-            </a>
+            <button class="menu-link" type="button" data-section="proces" data-label="Proces"><span>Proces</span></button>
           </li>
           <li class="menu-item" style="--offset:6px; --tilt:1deg; --gap:1.1rem;">
-            <a class="menu-link" href="artysci.html" data-label="Artyści" style="text-decoration:none;">
-              <span>Artyści</span>
-            </a>
+            <button class="menu-link" type="button" data-section="artysci" data-label="Artyści"><span>Artyści</span></button>
           </li>
           <li class="menu-item" style="--offset:18px; --tilt:2.2deg; --gap:1.9rem;">
-            <a class="menu-link" href="materialy.html" data-label="Materiały" style="text-decoration:none;">
-              <span>Materiały</span>
-            </a>
+            <button class="menu-link" type="button" data-section="materialy" data-label="Materiały"><span>Materiały</span></button>
           </li>
           <li class="menu-item" style="--offset:-4px; --tilt:-0.6deg; --gap:0.75rem;">
-            <a class="menu-link" href="galeria.html" data-label="Zdjęcia" style="text-decoration:none;">
-              <span>Zdjęcia</span>
-            </a>
+            <button class="menu-link" type="button" data-section="zdjecia" data-label="Zdjęcia"><span>Zdjęcia</span></button>
           </li>
           <li class="menu-item" style="--offset:14px; --tilt:1.8deg; --gap:1.3rem;">
-            <a class="menu-link" href="mapa.html" data-label="Mapa" style="text-decoration:none;">
-              <span>Mapa</span>
-            </a>
+            <a class="menu-link" href="mapa.html" data-label="Mapa" style="text-decoration:none;"><span>Mapa</span></a>
           </li>
           <li class="menu-item" style="--offset:-18px; --tilt:-2.4deg; --gap:1.8rem;">
-            <a class="menu-link" href="ekologia.html" data-label="Ekologia" style="text-decoration:none;">
-              <span>Ekologia</span>
-            </a>
+            <button class="menu-link" type="button" data-section="ekologia" data-label="Ekologia"><span>Ekologia</span></button>
           </li>
         </ul>
       </aside>
@@ -68,30 +52,166 @@
           <div class="text-shadow-layer text-shadow-layer--two" aria-hidden="true"></div>
 
           <article class="text-frame">
-            <p>
-              Las nie milczy. Trzeba tylko przestać go zagłuszać. „Cysterskie
-              Kompozycje" to koncert, który nie odbywa się w sali — odbywa się w lesie
-              i razem z lasem. Na polanie pod Przegędzą mikrofony wsłuchują się w to, co
-              zwykle umyka: szelest ściółki, głosy ptaków, wiatr przeczesujący korony.
-              Te dźwięki, zbierane na żywo, artyści delikatnie wzmacniają i puszczają w
-              ruch — tak, że krążą wokół słuchaczy, rozpięte między głośnikami
-              ustawionymi w kręgu.
-            </p>
-            <p>
-              Nie ma sceny ani podziału na wykonawców i widownię. Jest krąg ludzi
-              pośród drzew, często z zamkniętymi oczami, i dźwięk przychodzący ze
-              wszystkich stron — trochę z natury, trochę z technologii, a najbardziej z
-              uważności. Projekt łączy sztukę dźwięku, ekologię i nowe technologie, ale
-              jego sercem pozostaje godzina prawdziwej obecności w lesie. Wystarczy
-              usiąść, zamknąć oczy i pozwolić, żeby las mówił.
-            </p>
-          </article>
+            <!-- GŁÓWNA -->
+            <section class="frame-section is-active" data-section="glowna" id="home-section">
+              <p>
+                Las nie milczy. Trzeba tylko przestać go zagłuszać. „Cysterskie
+                Kompozycje" to koncert, który nie odbywa się w sali — odbywa się w lesie
+                i razem z lasem. Na polanie pod Przegędzą mikrofony wsłuchują się w to, co
+                zwykle umyka: szelest ściółki, głosy ptaków, wiatr przeczesujący korony.
+                Te dźwięki, zbierane na żywo, artyści delikatnie wzmacniają i puszczają w
+                ruch — tak, że krążą wokół słuchaczy, rozpięte między głośnikami
+                ustawionymi w kręgu.
+              </p>
+              <p>
+                Nie ma sceny ani podziału na wykonawców i widownię. Jest krąg ludzi
+                pośród drzew, często z zamkniętymi oczami, i dźwięk przychodzący ze
+                wszystkich stron — trochę z natury, trochę z technologii, a najbardziej z
+                uważności. Wystarczy usiąść, zamknąć oczy i pozwolić, żeby las mówił.
+              </p>
+            </section>
 
-          <p class="hero-enter" style="margin-top:1.6rem; font-size:0.95rem; letter-spacing:0.06em; display:flex; gap:1.2rem; flex-wrap:wrap;">
-            <a href="o-projekcie.html" style="color:var(--accent-soft); text-decoration:none; border-bottom:1px solid var(--accent-soft); padding-bottom:2px;">Wejdź w projekt →</a>
-            <a href="mapa.html" style="color:var(--accent-soft); text-decoration:none; border-bottom:1px solid var(--accent-soft); padding-bottom:2px;">Mapa dźwiękowa</a>
-            <a href="galeria.html" style="color:var(--accent-soft); text-decoration:none; border-bottom:1px solid var(--accent-soft); padding-bottom:2px;">Zdjęcia</a>
-          </p>
+            <!-- O PROJEKCIE -->
+            <section class="frame-section content" data-section="o-projekcie">
+              <p class="eyebrow">O projekcie</p>
+              <h2>Koncert w lesie i razem z lasem</h2>
+              <p>„Cysterskie Kompozycje" to artystyczno-ekologiczne wydarzenie dźwiękowe zrealizowane w przestrzeni leśnej w Przegędzy, na Polanie Kanetowiec. Najprościej opisać je jako immersyjny koncert plenerowy — choć w istocie projekt wykracza poza ramy koncertu. Dźwięki przyrody rejestrowano na miejscu, w czasie rzeczywistym, a następnie przetwarzano na żywo i odtwarzano z systemu głośników rozmieszczonych wokół publiczności. Powstawał wielowarstwowy pejzaż akustyczny, w którym trudno oddzielić to, co „naturalne", od tego, co „skomponowane".</p>
+              <figure>
+                <img src="zdjecia/foto-06.jpg" alt="Szeroki plan polany: leżaki i kolumny głośnikowe rozstawione w kręgu pośród drzew, jesienne liście na ściółce." loading="lazy" />
+                <figcaption>Polana Kanetowiec przygotowana do koncertu — krąg głośników i miejsc dla słuchaczy, bez sceny.</figcaption>
+              </figure>
+              <p>Głównym zamierzeniem projektu było rozwijanie świadomości ekologicznej i wrażliwości na środowisko dźwiękowe. Rzadko mamy okazję doświadczyć otoczenia wyłącznie uchem, w skupieniu, bez pośpiechu. Projekt proponuje praktykę uważnego słuchania jako sposób ponownego nawiązania relacji z naturą — nie przez apel, lecz przez bezpośrednie, zmysłowe doświadczenie. Technologia nie dominuje tu nad naturą, lecz pomaga ją usłyszeć wyraźniej: mikrofony terenowe, przestrzenne nagłośnienie i cyfrowe przetwarzanie dźwięku pełnią rolę soczewki.</p>
+              <p>Wydarzenie miało charakter otwarty i bezpłatny, a jego dopełnieniem są trwałe rezultaty cyfrowe: nagrania, booklet edukacyjny i dokumentacja. Projekt zrealizowała Fundacja Media 3.0 dzięki wsparciu z Krajowego Planu Odbudowy (KPO dla Kultury), we współpracy z Narodowym Instytutem Muzyki i Tańca.</p>
+
+              <h2>Idea słuchania natury</h2>
+              <p>W centrum projektu znajduje się czynność pozornie oczywista: słuchanie. Nie takie, które towarzyszy nam mimochodem, lecz słuchanie jako samodzielna, pełna praktyka — <em>deep listening</em>, głębokie słuchanie, w którym ucho przestaje filtrować świat pod kątem tego, co „ważne", i zaczyna przyjmować wszystko, co brzmi. Las okazuje się wtedy nie tłem, lecz współtwórcą: to on ustala rytmy ptaków i owadów, buduje przestrzeń bliskich mikrozdarzeń i dalekich planów wiatru.</p>
+              <p>Podczas wydarzenia te same sygnały, wychwytywane przez czułe mikrofony, wracały do uczestników subtelnie przetworzone — wzmocnione, zwielokrotnione, rozłożone w przestrzeni. Granica między tym, co słychać „naprawdę", a tym, co podane przez głośniki, celowo się rozmywała. I właśnie w tym rozmyciu rodziła się nowa uważność.</p>
+              <p class="pull">Trudno chronić coś, czego się nie zauważa. Kiedy las staje się głosem, zmienia się nasza wobec niego postawa.</p>
+
+              <h2>Jak wyglądało wydarzenie</h2>
+              <p>Sobota, 18 października 2025 roku, okolice południa. Na leśną Polanę Kanetowiec schodzą się uczestnicy. Nie ma bramek, biletów ani sceny — jest krąg kolumn głośnikowych pośród drzew, a wewnątrz niego miejsca dla słuchaczy. W centrum artyści przy stołach z mikserami i komputerami, otoczeni publicznością ze wszystkich stron. Po krótkim wprowadzeniu o ekologii dźwięku pada zachęta, by zamknąć oczy — polana cichnie w sposób, który w mieście się nie zdarza.</p>
+              <div class="duo">
+                <figure><img src="zdjecia/foto-03.jpg" alt="Publiczność odpoczywająca na leżakach, w tle stanowisko artystów i sosnowy las." loading="lazy" /></figure>
+                <figure><img src="zdjecia/foto-07.jpg" alt="Słuchacze na leżakach ustawionych w krąg pośród jesiennego lasu." loading="lazy" /></figure>
+              </div>
+              <p>Wtedy zaczyna mówić las. Mikrofony terenowe zbierają na żywo jego brzmienia, a artyści w czasie rzeczywistym je przetwarzają: filtrują, warstwują, mieszają z dźwiękami modelu sztucznej inteligencji wytrenowanego na nagraniach z tego samego lasu. Dźwięk krąży między kolumnami, okrąża słuchaczy. Z zamkniętymi oczami trudno orzec, czy ptak siedzi na gałęzi, czy w głośniku. I o to chodzi. Po około godzinie kompozycja przechodzi w krąg rozmowy i miniwarsztat słuchania.</p>
+
+              <h2>Miejsce wydarzenia</h2>
+              <p>Polana Kanetowiec leży w lasach otaczających Przegędzę, w gminie Czerwionka-Leszczyny, na skraju powiatu rybnickiego. Polana otoczona drzewami działa jak naturalna sala koncertowa: ściana lasu miękko odbija i pochłania dźwięk, tworząc przestrzeń o łagodnym, ciepłym pogłosie. Jesienią słychać tu przeloty ptaków, pracę wiatru w koronach, opadanie liści. Dla projektu opartego na nagraniach terenowych taki pejzaż to nie dekoracja, lecz materiał — partytura, którą las pisze na bieżąco.</p>
+              <p>Jest w tym miejscu warstwa symboliczna, do której odsyła tytuł: to okolice historycznie związane z krajobrazem kształtowanym przez cystersów — zakon, który osiedlał się na uboczu, w ciszy, w bliskości natury. „Cysterskie Kompozycje" nawiązują do tej tradycji wyciszenia i kontemplacji.</p>
+              <p class="cta"><a href="mapa.html">→ Zobacz interaktywną mapę dźwiękową</a></p>
+            </section>
+
+            <!-- PROCES -->
+            <section class="frame-section content" data-section="proces">
+              <p class="eyebrow">Proces i technologia</p>
+              <h2>Jak las zamienia się w kompozycję</h2>
+              <p>Za pozorną prostotą wydarzenia stało precyzyjnie zaprojektowane zaplecze techniczne. Pierwszym ogniwem były mikrofony terenowe, dobrane tak, by uchwycić różne warstwy środowiska. <strong>Kierunkowe</strong> pozwalały „celować" w odległe źródła; <strong>kontaktowe</strong>, przykładane do pni, rejestrowały drgania materii niesłyszalne dla ucha; para <strong>binauralna</strong> zbierała przestrzenny obraz otoczenia, a mikrofony <strong>ambientowe</strong> — jego szeroki plan.</p>
+              <figure>
+                <img src="zdjecia/foto-05.jpg" alt="Artyści pracujący przy stole z mikserami i plątaniną kabli, obok głośnik na statywie, jesienny las w tle." loading="lazy" />
+                <figcaption>Centrum kręgu — stanowisko z mikserami i komputerami, z którego prowadzono żywą kompozycję.</figcaption>
+              </figure>
+              <p>Tak zebrane sygnały stawały się materiałem żywej pracy kompozytorskiej — <em>live sound designu</em>. Artyści w czasie rzeczywistym wzmacniali detale, filtrowali pasma, nakładali warstwy, wydłużali frazy. Trzecim filarem był system przestrzennego nagłośnienia, przygotowany przez partnera technicznego — <strong>Fundację Soundscape</strong>. Kolumny w okręgu pozwalały płynnie przesuwać dźwięk między głośnikami, budując wrażenie ruchu i otaczającej obecności — rozwiązanie w tej skali i w terenie unikatowe w kraju.</p>
+              <p class="pull">Technologia nie była celem, lecz soczewką, przez którą las słychać uważniej niż gołym uchem.</p>
+
+              <h2>Proces powstawania</h2>
+              <p>Projekt od początku rozwijał się w terenie. Pierwszym etapem było rozpoznanie lokalizacji: trzeba było las po prostu usłyszeć — przejść dukty, sprawdzić, jak brzmi to miejsce o różnych porach dnia. Polana Kanetowiec wygrała swoją akustyką. Kolejne wizyty służyły dokumentacji i pierwszym nagraniom terenowym.</p>
+              <div class="duo">
+                <figure><img src="zdjecia/foto-09.jpg" alt="Artyści przy stole ze sprzętem i laptopem, w tle rowery i las." loading="lazy" /></figure>
+                <figure><img src="zdjecia/foto-01.jpg" alt="Dwoje artystów przy stole z mikserami i sprzętem elektronicznym, obok głośnik, w tle publiczność." loading="lazy" /></figure>
+              </div>
+              <p>Równolegle trwały testy sprzętu w warunkach leśnych — czułość mikrofonów, zachowanie nagłośnienia w otwartej przestrzeni, zasilanie z agregatu ładowanego energią słoneczną, zabezpieczenia przed wilgocią. Zebrane nagrania posłużyły też do wytrenowania modelu AI. Ostateczny kształt wydarzenia wynikał w równym stopniu z planowania, co z reagowania — na pogodę, światło, aktywność ptaków. Ten procesualny charakter pracy nie był słabością, lecz metodą.</p>
+
+              <h2>Technologie AI i resynteza dźwięku</h2>
+              <p>Jednym z najbardziej eksperymentalnych wątków było użycie sztucznej inteligencji jako narzędzia pracy z dźwiękiem. Technika ta nosi nazwę <em>neural synthesis</em>: zamiast programować brzmienia ręcznie, pozwala się modelowi „osłuchać" z nagraniami, by zbudował własną reprezentację danego świata dźwiękowego i generował nowe dźwięki w jego charakterze. Wykorzystano podejście typu <strong>RAVE</strong> (Realtime Audio Variational autoEncoder), umożliwiające resyntezę w czasie rzeczywistym — na tyle szybko, by grać nim na żywo, jak instrumentem.</p>
+              <p>Powstawały brzmienia niewystępujące w naturze, a jednak z niej zrodzone — zawieszone pomiędzy dokumentem a wyobraźnią. Sztuczna inteligencja nie zastępowała artystów; działała jak jeszcze jeden, osobliwy instrument, nad którym decyzje — co, kiedy i jak zabrzmi — pozostawały po stronie człowieka.</p>
+            </section>
+
+            <!-- ARTYŚCI -->
+            <section class="frame-section content" data-section="artysci">
+              <p class="eyebrow">Artyści</p>
+              <h2>Troje słuchających</h2>
+              <p>Trójka artystów o różnych, dopełniających się praktykach — od dokumentacji przyrody, przez sztukę dźwięku, po eksperymenty z nowymi technologiami. Podczas koncertu pracowali w centrum kręgu, wspólnie prowadząc żywą kompozycję z dźwięków lasu.</p>
+
+              <div class="artist">
+                <img src="portrety/emiter.jpg" alt="Marcin Dymiter (Emiter) w brązowej kurtce i czapce stoi obok mikrofonu terenowego z osłoną przeciwwietrzną, w tle łąka o zmierzchu." loading="lazy" />
+                <div>
+                  <h3>Emiter — Marcin Dymiter</h3>
+                  <p class="role">Field recording · kompozycja</p>
+                  <p>Artysta dźwiękowy i kompozytor działający w obszarze elektroniki eksperymentalnej, field recordingu i muzyki improwizowanej. Autor cyklu <em>Field Notes</em> oraz książek „Notatki z terenu" i „Maszyny do ciszy". W projekcie odpowiadał za pracę z nagraniami terenowymi i dramaturgię dźwiękową wydarzenia.</p>
+                </div>
+              </div>
+
+              <div class="artist">
+                <img src="portrety/izabela-dluzyk.jpg" alt="Izabela Dłużyk — zbliżenie uśmiechniętej twarzy, jasne włosy, delikatne światło." loading="lazy" />
+                <div>
+                  <h3>Izabela Dłużyk</h3>
+                  <p class="role">Dokumentacja dźwięku · nagrania przyrody</p>
+                  <p>Dokumentalistka dźwięku i rejestratorka przyrody, specjalizująca się w nagraniach terenowych ptaków i naturalnych krajobrazów akustycznych. Od kilkunastu lat buduje archiwum nagrań przyrody Polski i Europy. W „Cysterskich Kompozycjach" wniosła doświadczenie nasłuchiwania natury i mistrzowski warsztat rejestracji terenowej.</p>
+                </div>
+              </div>
+
+              <div class="artist">
+                <img src="portrety/zle-oko.jpg" alt="Łukasz Żyła (złe oko) siedzi na żółtym krześle podczas występu audiowizualnego, w tle projekcja złożona z wielu obrazów." loading="lazy" />
+                <div>
+                  <h3>złe oko — Łukasz Żyła</h3>
+                  <p class="role">Elektronika · systemy generatywne · AI</p>
+                  <p>Improwizator, artysta audiowizualny i badacz nowych technologii dźwięku. Twórca festiwali sztuki eksperymentalnej, m.in. Insomnia Art Festival. W projekcie odpowiadał za warstwę elektroniczną i generatywną koncertu — w tym pracę z modelem AI — oraz współorganizację przedsięwzięcia.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- MATERIAŁY -->
+            <section class="frame-section content" data-section="materialy">
+              <p class="eyebrow">Materiały</p>
+              <h2>Wydarzenie minęło — słuchanie może trwać</h2>
+              <p>Koncert trwał około godziny, ale projekt nie skończył się wraz z ostatnim dźwiękiem. Jego trwałym rezultatem jest zbiór materiałów cyfrowych — dostępnych otwarcie i bezpłatnie: nagrania audio, materiały wideo, dokumentacja fotograficzna oraz booklet edukacyjny. Pełnią one podwójną rolę: są dokumentacją jednorazowego wydarzenia i zarazem samodzielnymi utworami oraz narzędziami edukacyjnymi.</p>
+
+              <h3>Audio</h3>
+              <p>Najważniejszym materiałem jest zapis wydarzenia w dwóch wariantach. <strong>Miks stereo</strong> to wersja uniwersalna, do odsłuchu na dowolnym sprzęcie. <strong>Wersja binauralna</strong> odtwarza przestrzenny wymiar koncertu: w słuchawkach dźwięki lokalizują się wokół słuchacza — z przodu, z tyłu, z boków — tak jak na polanie. Obok rejestracji udostępniamy wybrane nagrania terenowe: czyste brzmienia miejsca, które były materiałem kompozycji i danymi treningowymi modelu AI.</p>
+              <p class="note">🎧 Słuchaj na słuchawkach — dopiero wtedy słychać ruch dźwięku między kolumnami i głębię planów. Chcesz posłuchać już teraz? <a href="mapa.html">Mapa dźwiękowa</a> pozwala wejść w pięć leśnych punktów nasłuchu i odtworzyć terenowe nagrania przyrody.</p>
+
+              <h3>Booklet</h3>
+              <p>Cyfrowa publikacja towarzysząca — bezpłatna, w formacie PDF i w wersji online. Zbiera komentarze artystów, tekst kuratorski oraz przystępnie napisaną część techniczną: rodzaje mikrofonów, techniki field recordingu, zasady live sound designu i pracy z przestrzennym nagłośnieniem oraz proces trenowania modelu AI. Zamieszczone kody QR prowadzą wprost do nagrań i materiałów wideo.</p>
+              <p>Wszystkie zasoby przygotowano z dbałością o dostępność, zgodnie ze standardem <strong>WCAG 2.1</strong> (m.in. transkrypcje i opisy alternatywne).</p>
+            </section>
+
+            <!-- ZDJĘCIA -->
+            <section class="frame-section content" data-section="zdjecia">
+              <p class="eyebrow">Dokumentacja</p>
+              <h2>Zdjęcia z polany</h2>
+              <p>Sobota, 18 października 2025 — Polana Kanetowiec pod Przegędzą. Krąg słuchaczy, stanowiska artystów i jesienny las jako współtwórca koncertu. Kliknij zdjęcie, aby powiększyć.</p>
+              <div class="gallery" id="gallery">
+                <button type="button" data-full="zdjecia/foto-01.jpg"><img src="zdjecia/foto-01.jpg" alt="Dwoje artystów przy stole z mikserami i sprzętem elektronicznym, obok głośnik, w tle publiczność." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-05.jpg"><img src="zdjecia/foto-05.jpg" alt="Artyści przy stole z mikserami i plątaniną kabli, głośnik na statywie, jesienny las." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-09.jpg"><img src="zdjecia/foto-09.jpg" alt="Artyści przy stole ze sprzętem i laptopem, w tle rowery i las." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-08.jpg"><img src="zdjecia/foto-08.jpg" alt="Zbliżenie stanowiska artystów z laptopem, obok rodzina z dzieckiem." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-06.jpg"><img src="zdjecia/foto-06.jpg" alt="Szeroki plan polany: leżaki i kolumny głośnikowe w kręgu wśród drzew, liście na ściółce." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-07.jpg"><img src="zdjecia/foto-07.jpg" alt="Słuchacze na leżakach ustawionych w krąg pośród jesiennego lasu." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-03.jpg"><img src="zdjecia/foto-03.jpg" alt="Publiczność odpoczywająca na leżakach, w tle stanowisko artystów i sosnowy las." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-04.jpg"><img src="zdjecia/foto-04.jpg" alt="Uczestnicy na leżakach przed drewnianą wiatą, na pierwszym planie osoba przy sprzęcie." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-02.jpg"><img src="zdjecia/foto-02.jpg" alt="Małe dziecko na jesiennej polanie wśród rozstawionych leżaków, w tle las i słuchacze." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-11.jpg"><img src="zdjecia/foto-11.jpg" alt="Prowadzący stojący obok publiczności wypoczywającej na leżakach." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-12.jpg"><img src="zdjecia/foto-12.jpg" alt="Uczestnicy zrelaksowani na leżakach podczas słuchania, jesienny las w tle." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-10.jpg"><img src="zdjecia/foto-10.jpg" alt="Korony drzew w jesiennych barwach na tle błękitnego nieba." loading="lazy" /></button>
+                <button type="button" data-full="zdjecia/foto-13.jpg"><img src="zdjecia/foto-13.jpg" alt="Kolumna głośnikowa na statywie i skrzynie transportowe na polanie przed koncertem." loading="lazy" /></button>
+              </div>
+            </section>
+
+            <!-- EKOLOGIA -->
+            <section class="frame-section content" data-section="ekologia">
+              <p class="eyebrow">Ekologia projektu</p>
+              <h2>Zrobione z uważności, o której mówi</h2>
+              <p>Projekt o słuchaniu natury nie może natury zagłuszać ani niszczyć — ta zasada wyznaczyła sposób realizacji na każdym poziomie. Ekologia nie była tu tematem opowieści, lecz praktyką organizacyjną: wydarzenie pomyślano jako formę niskoemisyjnej produkcji kultury. Zrezygnowano z klasycznej sceny i rozbudowanej infrastruktury — na polanie stanęły jedynie kolumny, stanowiska artystów i miejsca dla słuchaczy, rozstawione bez ingerencji w podłoże i w całości usunięte po wydarzeniu.</p>
+              <figure>
+                <img src="zdjecia/foto-13.jpg" alt="Kolumna głośnikowa na statywie i skrzynie transportowe na polanie — minimalna infrastruktura bez sceny." loading="lazy" />
+                <figcaption>Zamiast sceny — kilka kolumn i skrzyni transportowych. Cała infrastruktura znikała z polany po koncercie.</figcaption>
+              </figure>
+              <p>Szczególną uwagę poświęcono zasilaniu. Sprzęt pracował z cichego agregatu, naładowanego wcześniej energią z mobilnych paneli fotowoltaicznych — bez ciągnięcia okablowania i bez emisji spalin w trakcie wydarzenia. Niski poziom hałasu urządzenia (poniżej 50 dB) miał znaczenie podwójne: środowiskowe i artystyczne — w projekcie opartym na subtelnych brzmieniach natury głośne zasilanie unieważniłoby samą jego ideę.</p>
+              <p>Ślad środowiskowy ograniczono też inaczej: materiały opublikowano cyfrowo, bez masowych druków; sprzęt zabezpieczano rozwiązaniami wielokrotnego użytku; skalę wydarzenia dopasowano do chłonności miejsca. Treść i forma projektu pozostały spójne — „Cysterskie Kompozycje" mówiły o uważności wobec środowiska i były z tej uważności zrobione.</p>
+              <p class="pull">Las po koncercie wyglądał dokładnie tak jak przed nim.</p>
+            </section>
+          </article>
         </div>
       </main>
 
@@ -112,6 +232,11 @@
           </button>
         </div>
       </aside>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+      <span class="lb-close" aria-hidden="true">×</span>
+      <img id="lb-img" src="" alt="" />
     </div>
   </body>
 </html>
